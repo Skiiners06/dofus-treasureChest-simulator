@@ -64,6 +64,7 @@ img{
 .container{
     margin-top:-17px;
     background-color:lightgray;
+    padding-bottom: 50px;
 }
 h1,h2,h3{
     text-align: center;
@@ -142,5 +143,22 @@ h3{
     border-radius: 8px;
 }
 
+.buttonOpen {
+    width:100px;
+    height: auto;
+    padding-top:10px;
+    padding-bottom: 10px;
+    border-radius: 8px;
+    background-color:white;
+    opacity: 85%;
+    margin-top:20px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.buttonOpen:hover{
+    color:grey;
+    opacity: 70%;
+}
 
 

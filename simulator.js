@@ -37,8 +37,16 @@ function displaySelectedTreasure(i){
     let divContent = document.createElement('div')
     let treasureIcon = document.getElementsByClassName('icon')[i]
     let treasureDescr = document.getElementsByTagName('p')[i]
+
+    let openButton = document.createElement('p')
+    let textButton = document.createTextNode('Open !')
+
+    openButton.className = "buttonOpen"
+
     divContent.append(treasureIcon)
     divContent.append(treasureDescr)
+    openButton.appendChild(textButton)
+    divContent.append(openButton)
 
     divContent.className = 'divSelectedTreasure'
 
@@ -66,7 +74,7 @@ function displayBlackArrow(){
 
 
 function backHome(){
-    alert('test')
+    document.location.reload();
 
 }
 
