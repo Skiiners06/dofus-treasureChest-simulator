@@ -1,24 +1,3 @@
-// retourne un nombre aléatoire compris entre min et max
-function getRndInteger(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-let nbrose = getRndInteger(51, 250)
-console.log(`nb roses : ${nbrose}`)
-// Ex 52
-
-// Pour gérer les multiplicateur de nombres de roses des sables
-let probaMultiplier = getRndInteger(0, 100)
-console.log(`proba : ${probaMultiplier}`)
-
-if (probaMultiplier <= 75) {
-    console.log(nbrose)
-} else if (probaMultiplier <= 97) {
-    console.log(nbrose * 10)
-} else {
-    console.log(nbrose * 100)
-}
-
 
 let listeCoffre = document.getElementsByClassName('treasure')
 
@@ -58,6 +37,51 @@ function displaySelectedTreasure(i){
     // Appelle la fonction qui affiche l'image
     displayBlackArrow()
 
+
+    let bouttonOpen = document.getElementsByClassName('buttonOpen')[0]
+
+    bouttonOpen.addEventListener("click",awards)
+
+
+}
+
+let DivResult = document.createElement('Div')
+function awards(){
+    // retourne un nombre aléatoire compris entre min et max
+    function getRndInteger(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    let nbrose = getRndInteger(51, 250)
+    console.log(`nb roses : ${nbrose}`)
+
+
+    let PresultRoses = document.createElement('p')
+
+    PresultRoses.className = "resultRose"
+
+    DivResult.appendChild(PresultRoses)
+    DivResult.className = "Result"
+    document.getElementsByClassName('divSelectedTreasure')[0].appendChild(DivResult)
+
+
+
+// Pour gérer les multiplicateur de nombres de roses des sables
+    let probaMultiplier = getRndInteger(0, 100)
+    console.log(`proba : ${probaMultiplier}`)
+
+    if (probaMultiplier <= 75) {
+        PresultRoses.innerHTML = `Vous avez obtenue ${nbrose} roses des sables !`
+
+    } else if (probaMultiplier <= 97) {
+        console.log(nbrose * 10)
+        PresultRoses.innerHTML = `Vous avez obtenue ${nbrose*10} roses des sables !`
+
+    } else {
+        console.log(nbrose * 100)
+        PresultRoses.innerHTML = `Vous avez obtenue ${nbrose*100} roses des sables !`
+    }
+
 }
 
 function displayBlackArrow(){
@@ -72,11 +96,11 @@ function displayBlackArrow(){
 }
 
 
-
+// Fonction retour page accueil
 function backHome(){
     document.location.reload();
-
 }
+
 
 
 
