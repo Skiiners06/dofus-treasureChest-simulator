@@ -60,8 +60,10 @@ function awards(){
 
     PresultRoses.className = "resultRose"
 
+
     DivResult.appendChild(PresultRoses)
     DivResult.className = "Result"
+    DivResult.classList.add("w-9/12")
     document.getElementsByClassName('divSelectedTreasure')[0].appendChild(DivResult)
 
 
@@ -100,13 +102,3 @@ function displayBlackArrow(){
 function backHome(){
     document.location.reload();
 }
-
-
-
-
-
-
-
-
-
-

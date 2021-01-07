@@ -5,6 +5,9 @@
     <title>Dofus Treasure Chest Simulator</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+
 </head>
 <body>
 <svg width="0" height="0" class="hidden">
@@ -35,9 +38,9 @@
 </svg>
 
 <div class="container">
-    <h1> Dofus treasure chest simulator </h1>
-    <h2> Select the level of treasure chest </h2>
-    <div class="treasure-list">
+    <h1 class="text-3xl"> Dofus treasure chest simulator </h1>
+    <h2 class="text-2xl"> Select the level of treasure chest </h2>
+    <div class="treasure-list bg-gray-200 p-8 rounded-lg">
         <ul>
             <li class="treasure">
                 <!-- Changer img plus tard-->
@@ -104,7 +107,7 @@
         </ul>
     </div>
     <div class="container-main">
-        <div class="loots-list">
+        <div class="loots-list text-center md:text-center">
             <h3> Liste des drops possibles : </h3>
             <ul>
                 <li>roses des sables</li>
@@ -114,7 +117,7 @@
                 <li>.........</li>
             </ul>
         </div>
-        <div class="main">
+        <div class="main text-center">
             <div class="open">
 
             </div>
